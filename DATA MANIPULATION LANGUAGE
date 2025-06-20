@@ -1,0 +1,23 @@
+//INSERT DATA
+INSERT INTO mahasiswa (nim, nama_depan, nama_belakang, tgl_lahir, jenis_kelamin)
+VALUES ('672024000', 'Aryo', 'Priyadi', to_date('2003-10-30', 'YYYY-MM-DD'), 'L');
+
+//INSERT ALL (MULTIPLE DATA)
+INSERT ALL
+INTO mahasiswa VALUES ('672024001', 'Raven', 'Fajar', to_date('2003-02-25', 'YYYY-MM-DD'), 'L')
+INTO mahasiswa VALUES ('672024002', 'Anthony', 'Febrian', to_date('2003-02-03', 'YYYY-MM-DD'), 'L')
+INTO mahasiswa VALUES ('672024003', 'Hizkia', 'Kristalia', to_date('2004-09-24', 'YYYY-MM-DD'), 'P')
+INTO mahasiswa VALUES ('672024004', 'Enrico', 'Ardian', to_date('2004-07-07', 'YYYY-MM-DD'), 'L')
+INTO mahasiswa VALUES ('672024005', 'Sarah', 'Elisabeth', to_date('2005-10-25', 'YYYY-MM-DD'), 'P')
+SELECT * FROM dual;
+
+//UPDATE DATA
+UPDATE mahasiswa SET nama_belakang = 'Febriano' WHERE nim = '672024001';
+
+//DELETE DATA
+DELETE FROM mahasiswa WHERE nim = '672024005';
+
+//SELECT DATA
+SELECT * FROM mahasiswa; //semua data
+SELECT nama_depan, nama_belakang FROM mahasiswa; //data spesifik
+SELECT nama_depan, nama_belakang, jenis_kelamin FROM mahasiswa WHERE jenis_kelamin = 'P'; //data khusus dengan kondisi
