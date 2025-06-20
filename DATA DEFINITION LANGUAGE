@@ -1,0 +1,26 @@
+//CREATE TABLE
+CREATE TABLE mahasiswa(
+  nim VARCHAR2(9),
+  nama_depan VARCHAR2(30),
+  nama_belakang VARCHAR2(30),
+  tgl_lahir DATE,
+  jenis_kelamin CHAR(1)
+);
+
+//DROP TABLE
+DROP TABLE mahasiswa;
+
+//ALTER TABLE RENAME
+ALTER TABLE mahasiswa RENAME TO tabel_mahasiswa;
+
+//ALTER TABLE ADD COLUMN
+ALTER TABLE mahasiswa ADD (tempat_lahir VARCHAR2(50));
+
+//ALTER TABLE RENAME COLUMN 
+ALTER TABLE mahasiswa RENAME COLUMN tempat_lahir to usia;
+
+//ALTER TABLE MODIFY COLUMN DATA TYPE
+ALTER TABLE mahasiswa MODIFY (usia NUMBER (2));
+
+//ALTER TABLE DROP COLUMN
+ALTER TABLE mahasiswa DROP COLUMN usia;
